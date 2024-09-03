@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Annotation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-panel">
+            <input type="file" id="videoUpload" accept="video/*">
+            <video id="video" controls>
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button id="prevFrame" onclick="moveToPrevFrame()">Previous Frame</button>
+                <button id="nextFrame" onclick="moveToNextFrame()">Next Frame</button>
+            </div>
+        </div>
+        <div class="annotation-panel">
+            <h2>Annotation</h2>
+            <div class="action-set">
+                <button id="startButton">Start</button>
+                <input type="text" id="actionInput" placeholder="Enter action...">
+                <button id="anotherAction">Another Action</button>
+            </div>
+            <button id="saveAnnotation">Save Annotations</button>
+        </div>
+        <div class="annotation-list">
+            <h2>Annotations</h2>
+            <ul id="annotationList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
